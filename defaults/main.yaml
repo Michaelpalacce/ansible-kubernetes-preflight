@@ -1,0 +1,2 @@
+check_version_exists: yes
+k8s_version: 1.21.1-00
