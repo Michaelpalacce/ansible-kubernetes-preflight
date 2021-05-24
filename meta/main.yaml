@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-    role_name: kubernetes-preflight
+    role_name: kubernetes_preflight
     author: stefangenov
     description: Installs all kubernetes binaries. Follows instructions of the kubernetes docs install page for kubeadm
     platforms:
