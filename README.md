@@ -21,3 +21,10 @@ k8s_version
 The Kubernetes binaries version to install
 For a list of available versions run: `curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages | grep 'Package: kubelet' -A 2 | grep 'Version' | awk '{print $2}'`
 Defaults to: `1.21.1-00`
+
+~~~
+arch
+~~~
+Define kubernetes architecture binary you want to install. See: https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main
+Possible values: `amd64`, `armhf`, `arm64`, `i386`, `ppc64el`, `s390x`
+Defaults to: `amd64`.

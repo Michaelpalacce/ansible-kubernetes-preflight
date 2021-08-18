@@ -1,5 +1,5 @@
 - name: Ensure the passed k8s_version is supported. If you think this is wrong, disable this check.
-  shell: "curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-amd64/Packages | grep 'Package: kubelet' -A 2 | grep 'Version' | awk '{print $2}'"
+  shell: "curl -s https://packages.cloud.google.com/apt/dists/kubernetes-xenial/main/binary-{{ arch }}/Packages | grep 'Package: kubelet' -A 2 | grep 'Version' | awk '{print $2}'"
   register: k8s_versions
   when: check_version_exists
   until: k8s_versions.stdout.find( k8s_version ) != -1
